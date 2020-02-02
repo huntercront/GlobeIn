@@ -1,11 +1,8 @@
 
 
 @font-face {font-family: "SangBleu Sunrise";
-  src: url("sangbleu.eot"); /* IE9*/
-  src: url("sangbleu.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("sangbleu.woff") format("woff"), /* chrome、firefox */
-  url("sangbleu.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url("sangbleu.svg#SangBleu Sunrise") format("svg"); /* iOS 4.1- */
+	src: url("SangBleu_Sunrise.ttf"),
+			 url('SangBleu_Sunrise.ttf') format('truetype');
 }
 
 

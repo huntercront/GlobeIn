@@ -78,7 +78,17 @@ autoplay:false,
 
 });
 
-
+$(window).scroll(function() { 
+	var the_top = $(document).scrollTop();
+	if($(window).width() > 768){
+	if (the_top > 100) {
+		$('.header').addClass('header-solid');
+	}
+	else {
+		$('.header').removeClass('header-solid');
+		}
+	}
+});
 
  
 
