@@ -532,7 +532,9 @@ display: none;
 			border:none;
 			left: 50%;
     position: absolute;
-    transform: translate(-50%, 0px);
+		transform: translate(-50%, 0px);
+		padding-left: 0px;
+		width: 120px;
 		}
 	.sign-up{
 		margin-right: 0px;
