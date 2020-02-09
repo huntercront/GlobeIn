@@ -620,6 +620,7 @@ display: none;
 	background: #FBF6F6;
 	padding: 50px 0px;
 	position: relative;
+	transform: translate(0px,-4px);
 }
 .featured-title{
 	font-family: 'SangBleu Sunrise';
@@ -884,4 +885,94 @@ max-width: 278px;
 		max-width: 354px;
 		margin-top: 18px;
 	}
+}
+
+/* subscription */
+.subscription .block-title{
+	margin-bottom: 128px;
+}
+.subscription-block{
+	max-width: 284px;
+	margin: 0 68px;
+	width: 50%;
+}
+.subscription-block img{
+width: 100%;
+}
+.subscription-block:first-child{
+margin-left: 0px;
+}
+.subscription-block:last-child{
+	margin-right: 0px;
+	}
+.subscription-blocks{
+	margin-bottom: 100px;
+	position: relative;
+}
+.subscription-blocks:last-child{
+	margin-bottom: 0;
+}
+.subscription-descr{
+	font-family: 'TT Commons';
+	color: #8A8484;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+		line-height: 128.2%;
+    margin: 0;
+}
+.subscription-title-strong{
+	font-family: 'SangBleu Sunrise';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 130%;
+	color: #432E37;
+	margin:45px 0 30px 0;
+}
+.subscription{
+	position: relative;
+}
+.subscription-decore-line{
+	position: absolute;
+	width: 100%;
+	top: 15%;
+}
+@media(max-width:768px){
+	.subscription-blocks{
+		margin: 0 0 42px 0;
+
+	}
+	.subscription{
+		position: relative;
+		overflow: hidden;
+	}
+.subscription-decore-line{
+	width: 200%;
+	transform: translate(-30%,0);
+	top: 10%;
+}
+	.subscription-block{
+max-width: 205px;
+width: 40%;
+margin: 0;
+
+	}
+	.subscription-title-strong{
+		font-size: 22px;
+		margin:35px  0 25px 0;
+	}
+	.subscription .block-title{
+		margin-bottom: 75px;
+	}
+	.subscription-descr{
+		font-size: 14px;
+line-height: 128.2%;
+	}
+	.subscription-block:first-child{
+		margin-right: 7%;
+		}
+		.subscription-block:last-child{
+			margin-left: 7%;
+			}
 }
