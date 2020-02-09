@@ -620,7 +620,7 @@ display: none;
 	background: #FBF6F6;
 	padding: 50px 0px;
 	position: relative;
-	transform: translate(0px,-4px);
+	transform: translate(0px,-5px);
 }
 .featured-title{
 	font-family: 'SangBleu Sunrise';
@@ -824,7 +824,6 @@ max-width: 278px;
 
 .howitworks{
 	margin-top: 105px;
-	margin-bottom: 105px;
 }
 .howitworks .block-title{
 	margin-bottom: 105px;
@@ -932,6 +931,7 @@ margin-left: 0px;
 }
 .subscription{
 	position: relative;
+	margin-top: 266px;
 }
 .subscription-decore-line{
 	position: absolute;
@@ -946,6 +946,7 @@ margin-left: 0px;
 	.subscription{
 		position: relative;
 		overflow: hidden;
+		margin-top: 132px;
 	}
 .subscription-decore-line{
 	width: 200%;
@@ -975,4 +976,43 @@ line-height: 128.2%;
 		.subscription-block:last-child{
 			margin-left: 7%;
 			}
+}
+@media(max-width:468px){
+	.swipe-content{
+		display: flex;
+		justify-content: flex-start;
+		overflow-x: scroll;
+	}
+	.subscription{
+		margin-top: 126px;
+	}
+	.subscription-block{
+		min-width: 170px;
+	}
+	.subscription-blocks{
+		flex: 0 0 auto;
+	}
+	.subscription .hs-container{
+		width: 100%;
+	}
+	.subscription-blocks:first-child{
+		margin-left: 20px;
+	}
+	.subscription-block:first-child{
+		margin-right: 45px;
+	}
+	.subscription-block:last-child{
+		margin-left: 0px;
+	}
+	.subscription-title-strong{
+		font-size: 18px;
+		margin: 21px 0 15px 0;
+	}
+	.subscription-decore-line{
+		top: 5%;
+		width: 250%;
+	}
+	.subscription-blocks{
+		margin-bottom: 0;
+	}
 }
