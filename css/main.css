@@ -1079,7 +1079,9 @@ line-height: 128.2%;
 }
 .box-slide-img{
 width: 100%;
+transition: 250ms ease;
 }
+
 .box-slider{
 	max-width: 1098px;
 	margin: 0 auto;
@@ -1131,7 +1133,17 @@ opacity: 0.6;
 	left: 20px;
 	width: 27px;
 	height: 27px;
+	transition: 250ms ease;
 }
+.box-slide-item:hover .box-slide-zoome{
+	transform: scale(1.2);
+	}
+	.box-slide-item:hover .box-slide-img{
+		opacity: 0.8;
+		}
+		.box-slide-item:hover{
+			cursor: pointer;
+		}
 @media(max-width:992px){
 	.box-slide-title{
 		font-size: 24px;
