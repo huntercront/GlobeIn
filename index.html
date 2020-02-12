@@ -242,7 +242,7 @@
 			<div class="box-slider">
 
 				<div class="box-slide-item">
-						<div class="box-slide-img-container">
+						<div class="box-slide-img-container" data-open-modal="1" data-title="">
 								<img class="box-slide-img" src="./img/box-theme/box-theme-box-1.jpg" alt="">
 								<img class="box-slide-zoome" src="./img/box-theme/box-theme-zoom-icon.svg" alt="">
 							</div>
@@ -251,7 +251,7 @@
 				</div>
 				
 				<div class="box-slide-item">
-					<div class="box-slide-img-container">
+					<div class="box-slide-img-container" data-open-modal="1">
 						<img class="box-slide-img" src="./img/box-theme/box-theme-box-2.jpg" alt="">
 						<img class="box-slide-zoome" src="./img/box-theme/box-theme-zoom-icon.svg" alt="">
 					</div>
@@ -261,7 +261,7 @@
 
 
 					<div class="box-slide-item">
-						<div class="box-slide-img-container">
+						<div class="box-slide-img-container" data-open-modal="1">
 							<img class="box-slide-img" src="./img/box-theme/box-theme-box-3.jpg" alt="">
 							<img class="box-slide-zoome" src="./img/box-theme/box-theme-zoom-icon.svg" alt="">
 						</div>
@@ -269,7 +269,7 @@
 							<p class="box-slide-descr">New year, new you. Embark on a journey of self-discovery with your artfully curated Discover Box</p>
 						</div>
 						<div class="box-slide-item">
-							<div class="box-slide-img-container">
+							<div class="box-slide-img-container" data-open-modal="1">
 								<img class="box-slide-img" src="./img/box-theme/box-theme-box-4.jpg" alt="">
 								<img class="box-slide-zoome" src="./img/box-theme/box-theme-zoom-icon.svg" alt="">
 							</div>
@@ -277,7 +277,7 @@
 								<p class="box-slide-descr">Filled with vibrant plant-cessories, the Bloom Box will make adding a touch of nature to your home even more fun.</p>
 							</div>
 							<div class="box-slide-item">
-								<div class="box-slide-img-container">
+								<div class="box-slide-img-container" data-open-modal="1" data-title="Cozy Box" data-descr="<strong>Included in this Box:</strong>  • Whitewashed Terracotta Llama Planter from Bangladesh • Ceramic Pocket Wall Planter from Morocco • Indoor/Outdoor Tealight Lantern - Garden Party from India • Blue Pottery Herb Marker from India" data-slides="/img/box-theme/cozy-box/cozy-box-img-1.png, /img/box-theme/cozy-box/cozy-box-img-2.png, /img/box-theme/cozy-box/cozy-box-img-3.png, /img/box-theme/cozy-box/cozy-box-img-4.png">
 									<img class="box-slide-img" src="./img/box-theme/box-theme-box-5.jpg" alt="">
 									<img class="box-slide-zoome" src="./img/box-theme/box-theme-zoom-icon.svg" alt="">
 								</div>
@@ -294,11 +294,11 @@
 		<div class="hs-container">
 
 			<div class="impact-cols d-f-start-between">
-					<div class="impact-head-icon-title d-f-start-end">
+					<div class="impact-head-icon-title d-f-end-start">
 							<img src="./img/impact/impact-icon.svg" alt="">
 							<h2 class="block-title">Impact</h2>
 						</div>
-					<div class="impact-col-right impact-list">
+					<div class="impact-list-col">
 							<p class="impact-list">
 									• 1 million hours of work provided in just one year</br>
 									• 10,000+ artisan partners in 50+ countries</br>
@@ -306,7 +306,7 @@
 									• More than $3.5 million invested into artisan communities in the last 3 years alone
 							</p>
 						</div>
-
+<div class="impact-img-block d-f-start-between">
 				<div class="impact-col-left">
 					<img  class="impact-col-img"src="./img/impact/impact-img-1.jpg" alt="">
 
@@ -318,9 +318,45 @@
 						<img class="impact-col-img" src="./img/impact/impact-img-3.jpg" alt="">
 						<h4 class="impact-after-text">Every product has a story</h4>
 					</div>
+				</div>
 			</div>
 		</div>
 </section>
+
+
+
+
+
+
+
+
+
+<div class="box-modal" tabindex="-1" data-modal="1">
+  <div class="box-modal-dialog">
+    <div class="box-modal-content">
+      <div class="box-modal-header">
+				<h5 class="box-modal-title">box-modal title</h5>
+				<div class="box-modal-close">
+					<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19.7822 20.8897C20.0751 21.1826 20.5499 21.1826 20.8428 20.8897C21.1357 20.5968 21.1357 20.1219 20.8428 19.829L11.8732 10.8594L20.8428 1.88971C21.1357 1.59681 21.1357 1.12194 20.8428 0.829046C20.5499 0.536153 20.0751 0.536153 19.7822 0.829046L10.8125 9.79872L1.84283 0.829045C1.54994 0.536152 1.07506 0.536152 0.782169 0.829045C0.489277 1.12194 0.489277 1.59681 0.782169 1.88971L9.75184 10.8594L0.78217 19.829C0.489277 20.1219 0.489277 20.5968 0.78217 20.8897C1.07506 21.1826 1.54994 21.1826 1.84283 20.8897L10.8125 11.92L19.7822 20.8897Z"/>
+						</svg>
+						
+				</div>
+      </div>
+      <div class="box-modal-body">
+				<div class="box-modal-slider">
+
+				</div>
+				<p class="box-modal-descr-container">
+
+				</p>
+      </div>
+      <div class="box-modal-footer">
+				<a class="box-modal-link" href="">Get The Box</a>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Subscribe End -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>

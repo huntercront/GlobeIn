@@ -116,3 +116,154 @@ $('.box-slider').slick({
 	]
 }); 
 
+$(".what_modal").click(function(a) {
+
+	var img = $(this).attr('data-img').split(',');
+	var link = $(this).attr('data-link');
+
+	$('#boxes .modal_title').text($(this).attr("data-title"));
+	$('#boxes span.des').text($(this).attr("data-desc"));
+	$('#boxes .desc_two').text($(this).attr("data-desc-dop"));
+	$('#boxes').addClass($(this).attr("data-class"));
+
+
+	$('#boxes .text-center img').attr('src', img);
+	$('#boxes .button').attr('href', link);
+	$('#boxes').addClass('open');
+	$('body').addClass('ovr_d');
+	$('.overlay_modal').addClass('active');
+
+
+
+	var index;
+	for (index = 0; index < img.length; ++index) {
+		$('#boxes .slid_img').append('<div class="img_slide_modal"><div class="boxs_img" style="background-image: url('+img[index]+');"></div></div>');
+	}
+
+	$('.slid_img').slick({
+	infinite: true,
+	slidesToShow: 1,
+	arrows: true,
+	dots: true,
+	slidesToScroll: 1
+	});
+
+});
+
+
+
+
+function getScrollBarWidth () {
+	var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'}).appendTo('body'),
+			widthWithScroll = $('<div>').css({width: '100%'}).appendTo($outer).outerWidth();
+	$outer.remove();
+	return 100 - widthWithScroll;
+};
+var scrollWidth = getScrollBarWidth ();
+console.log(scrollWidth)
+
+// $('#scroll-check').remove();
+
+
+
+$('[data-open-modal]').on('click',function(event){
+event.preventDefault();
+$('[data-modal='+ $(this).attr('data-open-modal') +']').addClass('open-box-modal');
+$('[data-modal='+ $(this).attr('data-open-modal') +']').css({
+	"display":"block"
+})
+$('body').css({
+	"overflow":"hidden",
+	"padding-right":scrollWidth + "px"
+})
+$('body').append('<div class="overlay"></div>');
+$('.header').css('padding-right',scrollWidth+'px')
+
+
+
+	var img = $(this).attr('data-slides').split(',');
+	$('.box-modal-title').text($(this).attr("data-title"));
+	$('.box-modal-descr-container').html($(this).attr("data-descr"));
+	var index;
+	for (index = 0; index < img.length; ++index) {
+		$('.box-modal-slider').append('<div class="box-slide-wrapper"><div class="box-slider-img d-f-c-c"><img src="'+img[index]+'"></div></div>');
+	}
+
+	$('.box-modal-slider').slick({
+	infinite: true,
+	slidesToShow: 1,
+	arrows: true,
+	dots: true,
+	slidesToScroll: 1
+	});
+
+})
+
+
+$('.box-modal').on('click',function(event){
+	console.log('click');
+event.stopPropagation();
+$('.box-modal').removeClass('open-box-modal')
+$('.box-modal').css({
+	"display":"none"
+})
+$('body').css({
+	"overflow":"auto",
+	"padding-right":0 + "px"
+})
+$('.header').css('padding-right',0+'px');
+
+$('.box-modal-descr-container').html('');
+$('.box-modal-slider').html('');
+$('.box-modal-title').html('');
+$('.box-modal-slider').removeClass('slick-initialized');
+$('.box-modal-slider').removeClass('slick-slider');
+
+
+$('.overlay').remove();
+}).children()
+	.click(function(e){ 
+			e.stopPropagation();
+})
+
+$('.box-modal-close').on('click',function(event){
+event.stopPropagation();
+$('.box-modal').removeClass('open-box-modal')
+$('.box-modal').css({
+	"display":"none"
+})
+$('body').css({
+	"overflow":"auto",
+	"padding-right":0 + "px"
+})
+
+$('.box-modal-descr-container').html('');
+$('.box-modal-slider').html('');
+$('.box-modal-title').html('');
+$('.box-modal-slider').removeClass('slick-initialized');
+$('.box-modal-slider').removeClass('slick-slider');
+$('.header').css('padding-right',0+'px')
+$('.overlay').remove();
+})
+
+jQuery(document).on('keyup',function(evt) {
+if (evt.keyCode == 27) {
+	 if($('.box-modal').has('onen-box-modal')){
+		$('.box-modal').removeClass('open-box-modal')
+		$('.box-modal').css({
+			"display":"none"
+		})
+		$('body').css({
+			"overflow":"auto",
+			"padding-right":0 + "px"
+		})
+		$('.box-modal-descr-container').html('');
+$('.box-modal-slider').html('');
+$('.box-modal-title').html('');
+$('.box-modal-slider').removeClass('slick-initialized');
+$('.box-modal-slider').removeClass('slick-slider');
+		$('.header').css('padding-right',0+'px')
+		$('.overlay').remove();
+	 }
+}
+});
