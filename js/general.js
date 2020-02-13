@@ -112,6 +112,15 @@ $('.box-slider').slick({
 			infinite: true,
 			slidesToScroll: 1
 		}
+	},
+	{
+		breakpoint: 998,
+		settings: {
+			slidesToShow: 2,
+			arrows: true,
+			infinite: true,
+			slidesToScroll: 1
+		}
 	}
 	]
 }); 
@@ -145,6 +154,7 @@ $(".what_modal").click(function(a) {
 	slidesToShow: 1,
 	arrows: true,
 	dots: true,
+
 	slidesToScroll: 1
 	});
 
@@ -186,7 +196,13 @@ $('.header').css('padding-right',scrollWidth+'px')
 	$('.box-modal-descr-container').html($(this).attr("data-descr"));
 	var index;
 	for (index = 0; index < img.length; ++index) {
-		$('.box-modal-slider').append('<div class="box-slide-wrapper"><div class="box-slider-img d-f-c-c"><img src="'+img[index]+'"></div></div>');
+		if(index==0){
+			$('.box-modal-slider').append('<div class="box-slide-wrapper"><div class="box-slider-img d-f-c-c"><img src="'+img[index]+'"></div></div>');
+		}
+		else{
+			$('.box-modal-slider').append('<div class="box-slide-wrapper"><div class="box-slider-img d-f-c-c"><img data-lazy="'+img[index]+'"></div></div>');
+		}
+
 	}
 
 	$('.box-modal-slider').slick({
@@ -194,6 +210,7 @@ $('.header').css('padding-right',scrollWidth+'px')
 	slidesToShow: 1,
 	arrows: true,
 	dots: true,
+	lazyLoad: 'ondemand',
 	slidesToScroll: 1
 	});
 

@@ -1051,6 +1051,7 @@ line-height: 128.2%;
 	margin-top: 182px;
 	overflow: hidden;
 	padding-bottom: 286px;
+	background-repeat: no-repeat;
 }
 .box-slide-title{
 	font-family: 'SangBleu Sunrise';
@@ -1135,13 +1136,13 @@ opacity: 0.6;
 	height: 27px;
 	transition: 250ms ease;
 }
-.box-slide-item:hover .box-slide-zoome{
+.box-slide-img-container:hover .box-slide-zoome{
 	transform: scale(1.2);
 	}
-	.box-slide-item:hover .box-slide-img{
+	.box-slide-img-container:hover .box-slide-img{
 		opacity: 0.8;
 		}
-		.box-slide-item:hover{
+		.box-slide-img-container:hover{
 			cursor: pointer;
 		}
 @media(max-width:992px){
@@ -1452,6 +1453,32 @@ margin-bottom: 60px;
 .box-modal-close:hover svg{
 	fill: #FF8D88;
 }
+.box-slider-img img{
+	width: 100%;
+}
+
+
+@media(max-width:468px){
+	.box-modal-descr-container{
+		font-size: 14px;
+		width: auto;
+		margin: 25px;
+	}
+	.box-modal-link{
+		margin-bottom: 25px;
+		width: calc(100% - 50px);
+		margin-top: 0;
+		font-size: 20px;
+	}
+	.box-modal-title{
+		font-size: 24px;
+		margin: 20px 0px 19px 25px;
+	}
+	.box-modal-close{
+		top:23px;
+		right: 25px;
+	}
+}
 
 /* impact */
 .impact{
@@ -1642,3 +1669,15 @@ max-width: 345px;
 		padding-bottom: 0;
 	}
 }
+
+/* all-box */
+.all-boxes .box-slide-item{
+	max-width: 100%;
+}
+.all-boxes .box-slide-title{
+text-align: center;
+}
+.all-boxes .box-slide-descr{
+	text-align: center;
+	color: #FF8D88;
+	}
