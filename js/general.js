@@ -176,10 +176,10 @@ console.log(scrollWidth)
 
 
 
-$('[data-open-modal]').on('click',function(event){
+$('.box-slide-item').on('click','.box-slide-img-container,.box-slide-link',function(event){
 event.preventDefault();
-$('[data-modal='+ $(this).attr('data-open-modal') +']').addClass('open-box-modal');
-$('[data-modal='+ $(this).attr('data-open-modal') +']').css({
+$('[data-modal='+ $(this).parent('.box-slide-item').attr('data-open-modal') +']').addClass('open-box-modal');
+$('[data-modal='+ $(this).parent('.box-slide-item').attr('data-open-modal') +']').css({
 	"display":"block"
 })
 $('body').css({
@@ -191,9 +191,9 @@ $('.header').css('padding-right',scrollWidth+'px')
 
 
 
-	var img = $(this).attr('data-slides').split(',');
-	$('.box-modal-title').text($(this).attr("data-title"));
-	$('.box-modal-descr-container').html($(this).attr("data-descr"));
+	var img = $(this).parent('.box-slide-item').attr('data-slides').split(',');
+	$('.box-modal-title').text($(this).parent('.box-slide-item').attr("data-title"));
+	$('.box-modal-descr-container').html($(this).parent('.box-slide-item').attr("data-descr"));
 	var index;
 	for (index = 0; index < img.length; ++index) {
 		if(index==0){
@@ -218,7 +218,6 @@ $('.header').css('padding-right',scrollWidth+'px')
 
 
 $('.box-modal').on('click',function(event){
-	console.log('click');
 event.stopPropagation();
 $('.box-modal').removeClass('open-box-modal')
 $('.box-modal').css({
