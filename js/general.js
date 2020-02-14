@@ -283,3 +283,16 @@ $('.box-modal-slider').removeClass('slick-slider');
 	 }
 }
 });
+
+$(".accordion").on('click',function(event){
+	var answer = $(this).next(".answer");
+	if (answer.css('max-height')=='0px'){
+		$(this).toggleClass('accordion-active')
+		answer.css('max-height',answer.prop('scrollHeight') + "px");
+	} else {
+		answer.css('max-height','0px');
+
+		$(this).toggleClass('accordion-active')
+	} 
+	answer.toggleClass('accordion-desct-hide')
+})
