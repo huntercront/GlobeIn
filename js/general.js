@@ -306,11 +306,11 @@ $('.menu-button').on('click',function(event){
 $('body').on('click','.m-nemu-overley',function(event){
 	$('.menu-button').removeClass('menu-button-press')
 	$('.mobile-nav').removeClass('mobile-nav-show')
-	$('body').remove('m-nemu-overley'); 
+	$('.m-nemu-overley').remove(); 
 })
 window.onresize = function() {
 	if (window.innerWidth > 768) { 	$('.menu-button').removeClass('menu-button-press')
 	$('.mobile-nav').removeClass('mobile-nav-show')
-	$('body').remove('m-nemu-overley'); 
+	$('.m-nemu-overley').remove(); 
 }
 }
