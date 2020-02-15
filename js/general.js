@@ -125,6 +125,7 @@ $('.box-slider').slick({
 	]
 }); 
 
+
 $(".what_modal").click(function(a) {
 
 	var img = $(this).attr('data-img').split(',');
@@ -169,8 +170,6 @@ function getScrollBarWidth () {
 	$outer.remove();
 	return 100 - widthWithScroll;
 };
-var scrollWidth = getScrollBarWidth ();
-console.log(scrollWidth)
 
 // $('#scroll-check').remove();
 
@@ -178,16 +177,17 @@ console.log(scrollWidth)
 
 $('.box-slide-item').on('click','.box-slide-img-container,.box-slide-link',function(event){
 event.preventDefault();
+
 $('[data-modal='+ $(this).parent('.box-slide-item').attr('data-open-modal') +']').addClass('open-box-modal');
 $('[data-modal='+ $(this).parent('.box-slide-item').attr('data-open-modal') +']').css({
 	"display":"block"
 })
 $('body').css({
 	"overflow":"hidden",
-	"padding-right":scrollWidth + "px"
+	"padding-right":getScrollBarWidth() + "px"
 })
 $('body').append('<div class="overlay"></div>');
-$('.header').css('padding-right',scrollWidth+'px')
+$('.header').css('padding-right',getScrollBarWidth()+'px')
 
 
 
@@ -296,3 +296,21 @@ $(".accordion").on('click',function(event){
 	} 
 	answer.toggleClass('accordion-desct-hide')
 })
+
+$('.menu-button').on('click',function(event){
+	$(this).toggleClass('menu-button-press')
+	$('.mobile-nav').toggleClass('mobile-nav-show');
+	$('body').append('<div class="m-nemu-overley"></div>');
+	
+})
+$('body').on('click','.m-nemu-overley',function(event){
+	$('.menu-button').removeClass('menu-button-press')
+	$('.mobile-nav').removeClass('mobile-nav-show')
+	$('body').remove('m-nemu-overley'); 
+})
+window.onresize = function() {
+	if (window.innerWidth > 768) { 	$('.menu-button').removeClass('menu-button-press')
+	$('.mobile-nav').removeClass('mobile-nav-show')
+	$('body').remove('m-nemu-overley'); 
+}
+}
