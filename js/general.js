@@ -300,17 +300,17 @@ $(".accordion").on('click',function(event){
 $('.menu-button').on('click',function(event){
 	$(this).toggleClass('menu-button-press')
 	$('.mobile-nav').toggleClass('mobile-nav-show');
-	// $('body').append('<div class="m-nemu-overley"></div>');
+	$('.m-nemu-overley').toggleClass('active-show')
 	
 })
 $('body').on('click','.m-nemu-overley',function(event){
 	$('.menu-button').removeClass('menu-button-press')
 	$('.mobile-nav').removeClass('mobile-nav-show')
-	$('.m-nemu-overley').remove(); 
+	$('.m-nemu-overley').removeClass('active-show')
 })
 window.onresize = function() {
 	if (window.innerWidth > 768) { 	$('.menu-button').removeClass('menu-button-press')
 	$('.mobile-nav').removeClass('mobile-nav-show')
-	$('.m-nemu-overley').remove(); 
+	$('.m-nemu-overley').removeClass('active-show')
 }
 }
