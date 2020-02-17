@@ -3,6 +3,7 @@
 @font-face {font-family: "SangBleu Sunrise";
 	src: url("SangBleu_Sunrise.ttf"),
 			 url('SangBleu_Sunrise.ttf') format('truetype');
+			 font-display: swap;
 }
 
 
@@ -14,7 +15,8 @@
         url('TTCommons-Light.woff') format('woff'),
         url('TTCommons-Light.ttf') format('truetype');
     font-weight: 300;
-    font-style: normal;
+		font-style: normal;
+		font-display: swap;
 }
 
 
@@ -27,7 +29,8 @@
         url('TTCommons-Medium.woff') format('woff'),
         url('TTCommons-Medium.ttf') format('truetype');
     font-weight: 500;
-    font-style: normal;
+		font-style: normal;
+		font-display: swap;
 }
 
 
@@ -40,7 +43,8 @@
         url('TTCommons-Regular.woff') format('woff'),
         url('TTCommons-Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+		font-style: normal;
+		font-display: swap;
 }
 
 
