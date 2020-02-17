@@ -1138,6 +1138,7 @@ opacity: 0.6;
 }
 .box-slide-img-container{
 	position: relative;
+	transition: opacity 250ms ease-in-out;
 }
 .box-slide-zoome{
 	position: absolute;
@@ -1150,7 +1151,7 @@ opacity: 0.6;
 .box-slide-img-container:hover .box-slide-zoome{
 	transform: scale(1.2);
 	}
-	.box-slide-img-container:hover .box-slide-img{
+	.box-slide-img-container:hover{
 		opacity: 0.8;
 		}
 		.box-slide-img-container:hover{

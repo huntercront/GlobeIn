@@ -92,6 +92,7 @@ $(window).scroll(function() {
 
 $('.box-slider').slick({
 	infinite: true,
+	lazyLoad: 'ondemand',
 	slidesToShow: 3,
 	arrows: true,
 	slidesToScroll: 1,
@@ -125,41 +126,6 @@ $('.box-slider').slick({
 	]
 }); 
 
-
-$(".what_modal").click(function(a) {
-
-	var img = $(this).attr('data-img').split(',');
-	var link = $(this).attr('data-link');
-
-	$('#boxes .modal_title').text($(this).attr("data-title"));
-	$('#boxes span.des').text($(this).attr("data-desc"));
-	$('#boxes .desc_two').text($(this).attr("data-desc-dop"));
-	$('#boxes').addClass($(this).attr("data-class"));
-
-
-	$('#boxes .text-center img').attr('src', img);
-	$('#boxes .button').attr('href', link);
-	$('#boxes').addClass('open');
-	$('body').addClass('ovr_d');
-	$('.overlay_modal').addClass('active');
-
-
-
-	var index;
-	for (index = 0; index < img.length; ++index) {
-		$('#boxes .slid_img').append('<div class="img_slide_modal"><div class="boxs_img" style="background-image: url('+img[index]+');"></div></div>');
-	}
-
-	$('.slid_img').slick({
-	infinite: true,
-	slidesToShow: 1,
-	arrows: true,
-	dots: true,
-
-	slidesToScroll: 1
-	});
-
-});
 
 
 
