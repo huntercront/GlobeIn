@@ -28,7 +28,7 @@ autoplay:false,
 	});
 	$('.curent-slide-text').text($('.slick-active > div > .hero-slide').attr('data-text'));
 	$('.hero-slides').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		$('.curent-slide-text').text($('[data-slick-index ='+ nextSlide +'] > div > .hero-slide').attr('data-text'));
+		// $('.curent-slide-text').text($('[data-slick-index ='+ nextSlide +'] > div > .hero-slide').attr('data-text'));
 		resetProgressbar();
 		startProgressbar();
 	});
