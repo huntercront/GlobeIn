@@ -1358,6 +1358,7 @@ opacity: 1;
 
 }
 
+
 .box-modal-slider .slick-next:before{
 	content: '';
     background-image: url('../img/box-theme/box-slider-right-arrow.svg');
