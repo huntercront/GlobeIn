@@ -9,11 +9,13 @@
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-	<link rel="stylesheet" href="css/main.css">
-
+<link rel="stylesheet" href="./css/compiled.css">
 </head>
 
 <body>
+
+<!-- header (header.less) start-->
+
 <header class="header">
 	<div class="hs-container">
 		<div class="header-content d-f-c-between">
@@ -50,12 +52,27 @@
 	</div>
 </div>
 </header>
-	
+
+<!-- mobile-nav start -->
+<div class="mobile-nav">
+		<div class="hs-container">
+			<div class="mobile-nav-links">
+			<a href="" class="mobile-sign-in">Sign in</a>
+			<a href="" class="mobile-link">Gift</a>
+			<a href="" class="mobile-link">Subscribe</a>
+		</div>
+		</div>
+	</div>
+	<div class="m-nemu-overley"></div>
+<!-- mobile-nav end -->
+
+
+<!-- header (header.less) end-->
+
+
+<!-- hero-slider (hero-slider.less) start-->
 		<section class="hero">
-
 			<div class="hero-slides">
-
-
 				<div class="hero-slide" style="background-color: #FED4C7;">
 					<div class="hs-container">
 						<div class="hs-content">
@@ -108,7 +125,7 @@
 				</div>
 
 
-				<div class="hero-slide" style="background-color: #E7D7E0;" data-text="Premium full-size handmade products are delivered monthly. Shipping is free to neighboring USA.">
+				<div class="hero-slide" style="background-color: #E7D7E0;">
 						<div class="hs-container">
 							<div class="hs-content">
 								<div class="hs-slide-left">
@@ -144,6 +161,10 @@
 	</div>
 	</div>
 		</section>
+<!-- hero-slider (hero-slider.less) end-->
+
+
+<!-- As featured in (featured.less) start -->
 <section class="featured">
 	<div class="hs-container">
 		<div class="d-f-c-start featured-row">
@@ -173,7 +194,12 @@
 	</div>
 </div>
 </section>
-<div class="howitworks">
+<!-- As featured in(featured.less) end -->
+
+
+
+<!-- howitworks (howitworks.less) start -->
+<section class="howitworks">
 	<div class="hs-container">
 		<h2 class="block-title">How it Works</h2>
 		<div class="d-f-start-c howitworks-cards">
@@ -199,8 +225,11 @@
 											</div>
 		</div>
 	</div>
-</div>
+</section>
+<!-- howitworks (howitworks.less) end -->
 
+
+<!-- Explore the Subscription (subscription.less) start -->
 <section class="subscription">
 	<img class="subscription-decore-line" src="./img/subscription/subscription-img-decor-line.svg" alt="">
 	<div class="hs-container">
@@ -236,6 +265,12 @@
 	</div>
 	</div>
 </section>
+<!-- Explore the Subscription (subscription.less) end -->
+
+
+<!-- Featured Box Themes (box-themes.less) start -->
+<!-- in box-themes.less include box-modal.less  -->
+
 <section class="box-themes">
 	<div class="hs-container">
 			<h2 class="block-title">Featured Box Themes</h2>
@@ -289,7 +324,10 @@
 			</div>
 	</div>
 </section>
+<!-- Featured Box Themes (box-themes.less) end -->
 
+
+<!-- Impact (impact.less) start -->
 <section class="impact">
 		<img class="impact-decore-line" src="./img/impact/impact-decore-line.svg" alt="">
 		<div class="hs-container">
@@ -324,6 +362,9 @@
 		</div>
 </section>
 
+
+<!-- All Our Boxes (impact.less) start -->
+<!-- include box-theme.less -->
 <section class="all-boxes">
 	<div class="hs-container">
 		<h2 class="block-title">All Our Boxes</h2>
@@ -385,7 +426,7 @@
 									</div>
 		</div>
 </div>
-</section>
+
 <div class="botton-block before-questions">
 	<div class="hs-container">
 		<div class="single-butteon-wrapper d-f-c-c">
@@ -393,7 +434,10 @@
 	</div>
 </div>
 </div>
+</section>
+<!-- All Our Boxes (impact.less) end -->
 
+<!-- Are Artisans Paid Fairly? (artisans.less) start -->
 <section class="artisans">
 	<div class="hs-container">
 		<h2 class="block-title">Are Artisans Paid Fairly?</h2>
@@ -545,7 +589,10 @@
 
 </div>
 </section>
+<!-- Are Artisans Paid Fairly? (artisans.less) end -->
 
+
+<!-- Frequently asked questions (questions.less) start -->
 <section class="questions">
 	<div class="hs-container">
 		<h2 class="block-title">Frequently asked questions</h2>
@@ -614,6 +661,9 @@
 	</div>
 </div>
 </div>
+<!-- Frequently asked questions (questions.less) end -->
+
+<!-- footer (footer.less) start -->
 <footer class="footer">
 	<div class="footer-container">
 		<div class="footer-row">
@@ -667,18 +717,10 @@
 	</div>
 	</div>
 </footer>
+<!-- footer (footer.less) end -->
 
 
-<div class="mobile-nav">
-	<div class="hs-container">
-		<div class="mobile-nav-links">
-		<a href="" class="mobile-sign-in">Sign in</a>
-		<a href="" class="mobile-link">Gift</a>
-		<a href="" class="mobile-link">Subscribe</a>
-	</div>
-	</div>
-</div>
-<div class="m-nemu-overley"></div>
+<!-- modal (box-modal.less) start -->
 <div class="box-modal" tabindex="-1" data-modal="1">
   <div class="box-modal-dialog">
     <div class="box-modal-content">
@@ -705,7 +747,7 @@
     </div>
   </div>
 </div>
-
+<!-- modal (box-modal.less) start -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.0/slick/slick.min.js"></script>

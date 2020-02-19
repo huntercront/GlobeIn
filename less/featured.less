@@ -1,0 +1,159 @@
+// out: ../css/featured.css, compress: true, sourceMap: false
+.hs-container {
+	width: 96%;
+	max-width: 1700px;
+	margin: 0 auto;
+}
+.d-f-c-start{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+}
+.d-f-c-around{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+.featured {
+	background: #FBF6F6;
+	padding: 50px 0px;
+	position: relative;
+	transform: translate(0px,-5px);
+}
+
+.featured-title{
+	font-family: 'SangBleu Sunrise';
+	font-size: 20px;
+	color: #402F2F;
+	width: 30%;
+	margin: 0;
+	font-weight: 300;
+}
+.featured-logo {
+	width: auto;
+	max-height: 32px;
+	margin-right: 40px;
+	opacity: 0.35;
+	transition: opacity 350ms ease;
+	cursor: pointer;
+	position: relative;
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover {
+		opacity: 0.80;
+	}
+	img {
+		width: 100%;
+	}
+}
+.forbes {
+	max-width: 92px;
+}
+.tc {
+	max-width: 55px;
+}
+.bi {
+	max-width: 86px;
+}
+.masable {
+	max-width: 132px;
+}
+.in-touch {
+	max-width: 104px;
+}
+.msm {
+	max-width: 55px;
+}
+.featured-logos {
+	width: 70%;
+	max-width: 880px;
+}
+@media (max-width:992px) {
+	.featured-title {
+		width: 25%;
+		font-size: 16px;
+	}
+	.featured-logos {
+		width: 75%;
+	}
+	.featured-row {
+		justify-content: space-between;
+	}
+	.featured-logo {
+		margin-right: 30px;
+	}
+}
+@media (max-width:768px) {
+	.featured-title {
+		width: 100px;
+		font-size: 14px;
+	}
+	.featured-logos {
+		width: calc(100% - 140px);
+	}
+}
+@media (max-width:668px) {
+	.featured-row {
+		flex-direction: column;
+	}
+	.featured-title {
+		margin-bottom: 28px;
+	}
+	.featured-logos {
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.forbes {
+		img {
+			min-width: 58px;
+		}
+		order: 0;
+	}
+	.tc {
+		img {
+			min-width: 34px;
+		}
+		order: 1;
+	}
+	.bi {
+		img {
+			min-width: 50px;
+		}
+		order: 3;
+	}
+	.masable {
+		img {
+			min-width: 78px;
+		}
+		order: 4;
+	}
+	.in-touch {
+		img {
+			min-width: 62px;
+		}
+		order: 5;
+	}
+	.msm {
+		img {
+			min-width: 42px;
+		}
+		order: 2;
+	}
+	.featured-logo {
+		flex: 0 0 33.33333%;
+		max-width: 33%;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		padding: 5px 10px;
+		margin-bottom: 12px;
+	}
+	.featured {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+}
